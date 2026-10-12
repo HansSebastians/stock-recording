@@ -3,6 +3,10 @@
 @use "layout" as layout;
 @use "font" as font;
 
+body{
+    background-color: #F6F8F7;
+}
+
 .btn {
     &-green{
         display: flex;
@@ -35,5 +39,23 @@
     &--icon{
         gap: 8px;
     }
+    }
+}
+
+.container{
+    display: block;
+    width: fit-content;
+    border: 1.5px solid #E2E8E4;
+    border-radius: 10px;
+    font-family: font.$font-base;
+    background-color: map.get(base.$primary, PrimaryWhite);
+    padding-left: map.get(layout.$pading-container, p-left);
+    padding-right: map.get(layout.$pading-container, p-right);
+    padding-top: map.get(layout.$pading-container, p-top);
+    padding-bottom: map.get(layout.$pading-container, p-bottom);
+    &-information{
+        display: flex;
+        justify-content: space-between;
+        width: 274px;
     }
 }
