@@ -1,0 +1,39 @@
+@use "sass:map";
+@use "base" as base;
+@use "layout" as layout;
+@use "font" as font;
+
+.btn {
+    &-green{
+        display: flex;
+        align-items: center;
+        background-color: map.get(base.$primary, PrimaryGreen);
+        color: map.get(base.$primary, PrimaryWhite);
+        border: 1px solid map.get(base.$primary, PrimaryGreen);
+        border-radius: 8px;
+        height: 40px;
+        font-family: font.$font-base;
+        padding-right: map.get(layout.$padings, p-right);
+        padding-left: map.get(layout.$padings, p-left);
+        cursor: pointer;
+    &--icon{
+        gap: 8px;
+    }
+    }
+    &-white{
+        display: flex;
+        align-items: center;
+        background-color: map.get(base.$primary, PrimaryWhite);
+        color: map.get(base.$primary, PrimaryBlack);
+        border: 1px solid map.get(base.$second, BorderColor);
+        border-radius: 8px;
+        height: 40px;
+        font-family: font.$font-base;
+        padding-right: map.get(layout.$padings, p-right);
+        padding-left: map.get(layout.$padings, p-left);
+        cursor: pointer;
+    &--icon{
+        gap: 8px;
+    }
+    }
+}
